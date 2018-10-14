@@ -9,40 +9,6 @@ void clearingAFile();//forward declaration aka prototyping
 void addToFile(string url);//forward declaration aka prototyping
 void printFile(string url);//forward declaration aka prototyping
 
-/* these are just the functions i created as drafts to help me understand how to approach the problem
-void singleLineEntry (){
-    ofstream file ("example.txt"); // this is how you create a new file
-    cout << "add something to the file" << endl;
-    string text;
-    getline(cin, text); // getline is used to capture sentances.
-    cin.ignore(); // only reqired if cin and getline() are used sequentially
-    file << text << endl;
-    file.close();
-    interface();
-}
-void multiLineEntry (){
-    ofstream file;
-    string content, address;
-    
-    cout << "Enter address of file:" << endl;
-    cin >> address;
-    cin.ignore();
-    file.open (address.c_str(), fstream::out | fstream::app);
-    
-    if(file.is_open()){
-        cout << "Write something press space to end input" << endl;
-        while(content != " "){
-            getline(cin, content);
-            file << content << endl;
-        }
-        file.close();
-    }else{
-        cout << "File does not exist" << endl;
-    }
-    interface();
-}
-*/
-
 void clearingAFile (){
     ofstream file;
     string address;
@@ -154,8 +120,3 @@ int main (){
     interface();
     return 0;
 }
-
-// int rc = std::rename("from.txt", "to.txt"); 
-// if(rc) { 
-//     std::perror("Error renaming"); return 1; 
-// }
